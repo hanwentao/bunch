@@ -1,6 +1,6 @@
-import platform
+import sys
 
-_IS_PYTHON_3 = (platform.version() >= '3')
+_IS_PYTHON_3 = (sys.version_info[0] == 3)
 
 identity = lambda x : x
 
@@ -19,4 +19,3 @@ if _IS_PYTHON_3:
 else:
     iteritems = dict.iteritems
     iterkeys = dict.iterkeys
-
